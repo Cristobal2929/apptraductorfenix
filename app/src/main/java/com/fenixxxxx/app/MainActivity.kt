@@ -11,13 +11,13 @@ import android.speech.tts.TextToSpeech
 import android.view.View
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContextCompat
+import com.fenixxxxx.app.databinding.ActivityMainBinding
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textview.MaterialTextView
-import com.fenixxxxx.app.databinding.ActivityMainBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
+import kotlinx.coroutines.cancel
 import kotlinx.coroutines.launch
 import okhttp3.OkHttpClient
 import okhttp3.Request
@@ -128,8 +128,7 @@ class MainActivity : AppCompatActivity(), TextToSpeech.OnInitListener {
     private suspend fun translateText(text: String): String? {
         return try {
             val encodedText = URLEncoder.encode(text, "UTF-8")
-            val url =
-                "https://api.mymemory.translated.net/get?q=$encodedText&langpair=fr|es"
+            val url = "https://api.mymemory.translated.net/get?q=$encodedText&langpair=fr|es"
             val request = Request.Builder()
                 .url(url)
                 .get()
