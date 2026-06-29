@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Apptraductorfenix</string>
+
+    <string name="activate">Activar</string>
+    <string name="pause">Pausar</string>
+    <string name="repeat">Repetir</string>
+
+    <string name="original_placeholder">Texto original aparecerá aquí</string>
+    <string name="translation_placeholder">Traducción aparecerá aquí</string>
+
+    <string name="text_too_long">Texto demasiado largo (máx 500 caracteres).</string>
+    <string name="translation_failed">Error al traducir. Inténtalo de nuevo.</string>
+    <string name="no_translation_yet">Aún no hay traducción para reproducir.</string>
+    <string name="tts_not_supported">Idioma TTS no soportado.</string>
+    <string name="tts_init_failed">Fallo al iniciar TTS.</string>
+</resources>
